@@ -1,21 +1,21 @@
-# DeepSwitch
+# DeepCP
 
-*hyu edited on Nov 10, 2025*
+*hyu edited on Sep 17, 2026*
 
-The code for computational implementation of "A deep learning framework for designing switch-like core promoters".
+The code for computational implementation of "Deep learning-guided design of enhancer-responsive core promoters".
 
 # Introduction
 
-DeepSwitch is a deep learning–based framework that predicts core promoter activity and specificity and enables de novo design through multi-objective optimization. Using massively parallel reporter assays, we profile 48,000 natural and synthetic sequences in inducible and cell type-specific systems, uncovering regulatory grammar from single-base variants to motif combinations that drive switch-like transcriptional responses. Through iterative optimization, we engineer synthetic core promoters exhibiting up to 16-fold higher specificity than the commonly used miniCMV at comparable maximal output, maintaining robust performance across distinct systems.
+DeepCP is a deep learning framework coupled with massively parallel reporter assays to model and design enhancer-responsive core promoters. By profiling 48,000 natural and synthetic sequences across inducible and cell type-specific enhancer contexts, we identify sequence determinants, from single-nucleotide variants to motif alterations and combinatorial interactions that influence basal activity, activated activity, and enhancer responsiveness. We find that combinations of core promoter elements can synergistically modulate enhancer responsiveness, while motifs associated with sequence-specific transcription factors show context-dependent effects. Through iterative optimization, we identify synthetic core promoters with up to 16.1-fold and 11.1-fold higher enhancer responsiveness than miniCMV in inducible and cell type-specific enhancer contexts, respectively. These results reveal key sequence determinants governing enhancer responsiveness and enable the programmable design of core promoters with precisely tuned regulatory activity..
 
 ![Figure 1](./Figures/github/Figure1.png)
-**Figure 1.** Overview of the DeepSwitch framework, including sequence generation, multi-layered prediction, iterative multi-objective optimization and massively parallel reporter assays.
+**Figure 1.** Overview of the DeepCP framework, including sequence generation, multi-layered prediction, iterative multi-objective optimization and massively parallel reporter assays.
 
 # Quick Start
 
 1. Clone the repository
 2. Set up the environment
-3. Run DeepSwitch sequence prediction
+3. Run DeepCP sequence prediction
 
 ```
 import pandas as pd
@@ -296,25 +296,25 @@ The relevant training data is stored in the [Zenedo](https://zenodo.org/records/
 
 ## Generation
 
-The code in `1_DeepSwitch_model/MDM_switch.py` implements the MDM model deployed via GPro for efficient generation of switch-like sequences.
+The code in `1_DeepCP_model/MDM_switch.py` implements the MDM model deployed via GPro for efficient generation of switch-like sequences.
 
 ## Prediction
 
-The code in `1_DeepSwitch_model/Monitor.py`, `1_DeepSwitch_model/Discriminator.py`, `1_DeepSwitch_model/Evaluator_strength.py`, and `1_DeepSwitch_model/Evaluator_specificity.py` is used to train the multi-layered predictive framework DeepSwitch.
+The code in `1_DeepCP_model/Monitor.py`, `1_DeepCP_model/Discriminator.py`, `1_DeepCP_model/Evaluator_strength.py`, and `1_DeepCP_model/Evaluator_specificity.py` is used to train the multi-layered predictive framework DeepCP.
 
 ## Optimization
 
-The code in `1_DeepSwitch_model/DeepSwitch_MDM_design.py` integrates the outputs from the generation model and applies the predictive models to select optimal sequences.
+The code in `1_DeepCP_model/DeepCP_MDM_design.py` integrates the outputs from the generation model and applies the predictive models to select optimal sequences.
 
 # Other Information
 
-The Zenodo repository for DeepSwitch [trained models and datasets](https://zenodo.org/records/17567543) have also been updated.
+The Zenodo repository for DeepCP [trained models and datasets](https://zenodo.org/records/17567543) have also been updated.
 
 ### Folder Structure and Contents
 | Folder | Description |
 |--------|-------------|
-| `0_preprocessing` | Data preprocessing pipelines used for sequence filtering and evaluation in DeepSwitch |
-| `1_DeepSwitch_model` | Implementation of predictive models for generation, evaluation, and optimization of switch-like sequences |
+| `0_preprocessing` | Data preprocessing pipelines used for sequence filtering and evaluation in DeepCP |
+| `1_DeepCP_model` | Implementation of predictive models for generation, evaluation, and optimization of switch-like sequences |
 | `2_MOO_model` | Iterative multi-objective optimization framework for designing sequences in the second-round MPRA library |
 | `3_other_analysis` | Tools for downstream analysis, visualization, and performance evaluation of experimental results |
 
