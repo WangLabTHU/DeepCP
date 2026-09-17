@@ -6,7 +6,7 @@ The code for computational implementation of "Deep learning-guided design of enh
 
 # Introduction
 
-DeepCP is a deep learning framework coupled with massively parallel reporter assays to model and design enhancer-responsive core promoters. By profiling 48,000 natural and synthetic sequences across inducible and cell type-specific enhancer contexts, we identify sequence determinants, from single-nucleotide variants to motif alterations and combinatorial interactions that influence basal activity, activated activity, and enhancer responsiveness. We find that combinations of core promoter elements can synergistically modulate enhancer responsiveness, while motifs associated with sequence-specific transcription factors show context-dependent effects. Through iterative optimization, we identify synthetic core promoters with up to 16.1-fold and 11.1-fold higher enhancer responsiveness than miniCMV in inducible and cell type-specific enhancer contexts, respectively. These results reveal key sequence determinants governing enhancer responsiveness and enable the programmable design of core promoters with precisely tuned regulatory activity..
+DeepCP is a deep learning framework coupled with massively parallel reporter assays to model and design enhancer-responsive core promoters. By profiling 48,000 natural and synthetic sequences across inducible and cell type-specific enhancer contexts, we identify sequence determinants, from single-nucleotide variants to motif alterations and combinatorial interactions that influence basal activity, activated activity, and enhancer responsiveness. We find that combinations of core promoter elements can synergistically modulate enhancer responsiveness, while motifs associated with sequence-specific transcription factors show context-dependent effects. Through iterative optimization, we identify synthetic core promoters with up to 16.1-fold and 11.1-fold higher enhancer responsiveness than miniCMV in inducible and cell type-specific enhancer contexts, respectively. These results reveal key sequence determinants governing enhancer responsiveness and enable the programmable design of core promoters with precisely tuned regulatory activity.
 
 ![Figure 1](./Figures/github/Figure1.png)
 **Figure 1.** Overview of the DeepCP framework, including sequence generation, multi-layered prediction, iterative multi-objective optimization and massively parallel reporter assays.
@@ -327,5 +327,5 @@ This code is released under the Creative Commons Attribution-NonCommercial 4.0 I
 
 ~~~
 
-[1] Yu, H., & WangLabTHU. (2025). Decoding the design logic of switch-like core promoters. Zenodo. https://doi.org/10.5281/zenodo.17567543
+[1] Yu, H., & WangLabTHU. (2025). Deep learning-guided design of enhancer-responsive core promoters. Zenodo. https://doi.org/10.5281/zenodo.17567543
 ~~~
